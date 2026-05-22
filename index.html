@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Wedding Invitation</title>
 
@@ -15,383 +14,392 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#fff7ef;
-overflow-x:hidden;
-color:#5c2d00;
-scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
+  background:#fff8f3;
+  overflow-x:hidden;
+  color:#4b2e2e;
 }
 
 /* OPEN SCREEN */
 
-.open-screen{
-position:fixed;
-inset:0;
-background:linear-gradient(135deg,#fff3dc,#ffe2b5);
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-transition:1s;
+.opening{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#4b004f,#8b008b,#d1007a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  overflow:hidden;
 }
 
-.open-content{
-text-align:center;
-padding:20px;
-animation:fadeUp 1.5s ease;
+.opening-content{
+  text-align:center;
+  color:white;
+  animation:fadeUp 1.5s ease;
+  padding:20px;
 }
 
 .om{
-font-size:60px;
-color:#d18b00;
-margin-bottom:10px;
+  font-size:4rem;
+  margin-bottom:10px;
+  animation:float 3s infinite ease-in-out;
 }
 
-.small{
-letter-spacing:6px;
-color:#7a4b00;
-margin-bottom:15px;
+.opening h1{
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+  margin-bottom:15px;
 }
 
-.big1{
-font-size:4rem;
-font-family:'Great Vibes',cursive;
-color:#5a2100;
-}
-
-.big2{
-font-size:5rem;
-font-family:'Great Vibes',cursive;
-background:linear-gradient(45deg,#ff9800,#ffcc66,#ff6f00);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.opening p{
+  letter-spacing:3px;
+  margin-bottom:30px;
 }
 
 .open-btn{
-margin-top:30px;
-padding:18px 45px;
-border:none;
-border-radius:50px;
-background:linear-gradient(45deg,#ff9800,#ffb300);
-color:white;
-font-size:1rem;
-cursor:pointer;
-transition:0.4s;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  padding:16px 40px;
+  border:none;
+  border-radius:50px;
+  background:gold;
+  color:#4b004f;
+  font-weight:600;
+  cursor:pointer;
+  font-size:1rem;
+  transition:0.4s;
 }
 
 .open-btn:hover{
-transform:scale(1.08);
+  transform:scale(1.08);
+}
+
+.music-btn{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 32px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(45deg,#ffcc33,#b8860b);
+  color:#4b004f;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.music-btn:hover{
+  transform:scale(1.05);
 }
 
 /* HERO */
 
 .hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-padding:30px;
-position:relative;
-background:
-linear-gradient(rgba(255,247,239,0.92),rgba(255,247,239,0.95)),
-url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop')
-center/cover;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:40px 20px;
+  background:
+  linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.85)),
+  url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop') center/cover;
+  position:relative;
 }
 
 .hero::before{
-content:'';
-position:absolute;
-inset:20px;
-border:4px solid #f0b34f;
-border-radius:20px;
+  content:'';
+  position:absolute;
+  inset:20px;
+  border:4px solid #d4af37;
+  border-radius:25px;
 }
 
-.poster{
-width:350px;
-max-width:95%;
-border-radius:25px;
-margin-bottom:30px;
-z-index:2;
-box-shadow:0 15px 35px rgba(0,0,0,0.25);
-animation:float 4s ease-in-out infinite;
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
-.title{
-font-size:2.8rem;
-color:#8b3f00;
-z-index:2;
+.small-title{
+  letter-spacing:4px;
+  color:#b8860b;
+  margin-bottom:10px;
+}
+
+.main-title{
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+  color:#5c003f;
 }
 
 .couple{
-font-family:'Great Vibes',cursive;
-font-size:5rem;
-color:#d66a00;
-margin:20px 0;
-z-index:2;
-animation:glow 3s infinite;
+  font-family:'Great Vibes',cursive;
+  font-size:5rem;
+  margin:20px 0;
+  background:linear-gradient(45deg,#b8860b,#ffcc33,#b8860b);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:glow 3s infinite;
 }
 
 .date{
-font-size:1.3rem;
-letter-spacing:2px;
-margin-bottom:20px;
-z-index:2;
+  font-size:1.3rem;
+  margin-bottom:20px;
+  color:#7b2d26;
 }
 
-.text{
-max-width:750px;
-line-height:1.9;
-z-index:2;
+.message{
+  max-width:750px;
+  line-height:1.9;
+  margin:auto;
 }
 
 /* SECTION */
 
 section{
-padding:80px 20px;
+  padding:80px 20px;
 }
 
 .section-title{
-text-align:center;
-font-size:3rem;
-font-family:'Great Vibes',cursive;
-color:#8b3f00;
-margin-bottom:50px;
+  text-align:center;
+  font-size:2.8rem;
+  color:#7b004f;
+  margin-bottom:50px;
+  font-family:'Great Vibes',cursive;
 }
 
+/* CARD */
+
 .card{
-max-width:1100px;
-margin:auto;
-background:white;
-padding:40px;
-border-radius:25px;
-border:2px solid #ffd08a;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  background:white;
+  max-width:1100px;
+  margin:auto;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  border:2px solid #f0d39c;
 }
 
 /* DETAILS */
 
 .details{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
-.box{
-background:#fff8ef;
-padding:30px;
-border-radius:20px;
-border:2px solid #ffd18c;
-text-align:center;
-transition:0.4s;
+.detail-box{
+  background:#fff8ef;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  border:1px solid #f1cf96;
+  transition:0.4s;
 }
 
-.box:hover{
-transform:translateY(-10px);
+.detail-box:hover{
+  transform:translateY(-8px);
 }
 
-.box h3{
-margin-bottom:15px;
-color:#c26500;
+.detail-box h3{
+  margin-bottom:15px;
+  color:#8b005d;
 }
 
 /* COUNTDOWN */
 
 .countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .time{
-width:120px;
-height:120px;
-background:white;
-border-radius:20px;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-border:2px solid #ffc46d;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  width:120px;
+  height:120px;
+  border-radius:20px;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  border:2px solid #e5c17a;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .time h2{
-font-size:2.5rem;
-color:#ff7b00;
+  font-size:2.4rem;
+  color:#b05b00;
 }
 
 /* SCRATCH */
 
+.scratch-box{
+  text-align:center;
+}
+
 .scratch-container{
-position:relative;
-width:320px;
-height:320px;
-margin:auto;
-border-radius:20px;
-overflow:hidden;
-border:4px solid #d9b382;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  position:relative;
+  width:100%;
+  max-width:320px;
+  height:320px;
+  margin:30px auto;
+  border-radius:20px;
+  overflow:hidden;
+  border:4px solid #d6a646;
 }
 
-.qr-image{
-width:100%;
-height:100%;
-object-fit:cover;
+.scratch-container img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-#scratchCanvas{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-cursor:pointer;
+.scratch-container canvas{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
 
 /* RSVP */
 
 .rsvp{
-text-align:center;
+  text-align:center;
 }
 
 .rsvp a{
-display:inline-block;
-margin-top:25px;
-padding:16px 40px;
-background:linear-gradient(45deg,#ff9800,#ffb300);
-color:white;
-text-decoration:none;
-border-radius:50px;
-transition:0.4s;
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 35px;
+  border-radius:50px;
+  background:linear-gradient(45deg,#b8860b,#ffcc33);
+  color:#4b004f;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.4s;
 }
 
 .rsvp a:hover{
-transform:scale(1.08);
+  transform:scale(1.08);
 }
 
-/* MUSIC */
-
-.music-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-border:none;
-border-radius:50%;
-background:#ff9800;
-color:white;
-font-size:24px;
-cursor:pointer;
-z-index:999;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+/* OPEN LOCATION BUTTON */
+.open-location{
+  display:inline-block;
+  margin:18px auto 0;
+  padding:12px 28px;
+  border-radius:20px;
+  background:linear-gradient(45deg,#b8860b,#ffcc33);
+  color:#4b004f;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+  border:2px solid rgba(75,0,79,0.06);
 }
 
-/* HEARTS */
-
-.hearts span{
-position:fixed;
-bottom:-100px;
-font-size:22px;
-color:#ff8a80;
-animation:heartMove linear infinite;
-pointer-events:none;
+.open-location:hover{
+  transform:scale(1.04);
 }
-
-.hearts span:nth-child(1){left:10%;animation-duration:8s;}
-.hearts span:nth-child(2){left:20%;animation-duration:10s;}
-.hearts span:nth-child(3){left:35%;animation-duration:12s;}
-.hearts span:nth-child(4){left:50%;animation-duration:9s;}
-.hearts span:nth-child(5){left:70%;animation-duration:11s;}
-.hearts span:nth-child(6){left:85%;animation-duration:13s;}
 
 /* FOOTER */
 
 footer{
-background:#8b3f00;
-color:white;
-text-align:center;
-padding:30px;
+  background:#5c003f;
+  color:white;
+  text-align:center;
+  padding:25px;
 }
 
-/* ANIMATIONS */
+/* HEARTS */
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
+.hearts{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow:hidden;
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+.hearts span{
+  position:absolute;
+  bottom:-100px;
+  color:#ff8fb1;
+  animation:heartMove linear infinite;
 }
-}
+
+.hearts span:nth-child(1){left:10%;font-size:20px;animation-duration:8s;}
+.hearts span:nth-child(2){left:25%;font-size:30px;animation-duration:10s;}
+.hearts span:nth-child(3){left:45%;font-size:25px;animation-duration:12s;}
+.hearts span:nth-child(4){left:60%;font-size:18px;animation-duration:9s;}
+.hearts span:nth-child(5){left:75%;font-size:22px;animation-duration:11s;}
+.hearts span:nth-child(6){left:90%;font-size:28px;animation-duration:13s;}
+
+/* ANIMATION */
 
 @keyframes glow{
-0%{
-text-shadow:0 0 5px #ffb74d;
-}
-50%{
-text-shadow:0 0 25px #ff9800;
-}
-100%{
-text-shadow:0 0 5px #ffb74d;
-}
-}
-
-@keyframes float{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-12px);
-}
+  0%{
+    text-shadow:0 0 5px gold;
+  }
+  50%{
+    text-shadow:0 0 25px gold;
+  }
+  100%{
+    text-shadow:0 0 5px gold;
+  }
 }
 
 @keyframes heartMove{
-0%{
-transform:translateY(0);
-opacity:1;
+  0%{
+    transform:translateY(0);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-1000px);
+    opacity:0;
+  }
 }
-100%{
-transform:translateY(-1000px);
-opacity:0;
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.big1{
-font-size:2.5rem;
-}
+  .main-title{
+    font-size:2.8rem;
+  }
 
-.big2{
-font-size:3rem;
-}
-
-.couple{
-font-size:3.2rem;
-}
-
-.title{
-font-size:2rem;
-}
-
-.poster{
-width:95%;
-}
+  .couple{
+    font-size:3.5rem;
+  }
 
 }
 
@@ -400,74 +408,74 @@ width:95%;
 
 <body>
 
-<!-- OPEN SCREEN -->
-
-<div class="open-screen" id="openScreen">
-
-<div class="open-content">
-
-<div class="om">ॐ</div>
-
-<div class="small">SHUBH VIVAH</div>
-
-<div class="big1">
-You are invited to
-</div>
-
-<div class="big2">
-Wedding Celebration
-</div>
-
-<button class="open-btn" onclick="openInvitation()">
-Tap To Open Invitation
-</button>
-
-</div>
-</div>
-
 <!-- MUSIC -->
 
-<audio id="music" loop>
-<source src="mi.mp3.mpeg" type="audio/mp3">
+<audio id="bgMusic" loop>
+  <source src="mi.mp3.mpeg" type="audio/mp3">
 </audio>
 
-<button class="music-btn" onclick="toggleMusic()">
-🎵
-</button>
+<!-- OPEN SCREEN -->
+
+<div class="opening" id="opening">
+
+  <div class="opening-content">
+
+    <div class="om">🕉</div>
+
+    <p>WEDDING INVITATION</p>
+
+    <h1>Wedding Celebration</h1>
+
+    <button class="open-btn" onclick="openInvitation()">
+      Tap To Open
+    </button>
+
+  </div>
+
+</div>
 
 <!-- FLOATING HEARTS -->
 
 <div class="hearts">
-<span>❤</span>
-<span>❤</span>
-<span>❤</span>
-<span>❤</span>
-<span>❤</span>
-<span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
+  <span>❤</span>
 </div>
 
 <!-- HERO -->
 
 <section class="hero">
 
+  <div class="hero-content">
 
-<h1 class="title">
-Wedding Invitation
-</h1>
+    <p class="small-title">TOGETHER WITH THEIR FAMILIES</p>
 
-<div class="couple">
-Rajkumar <br>&<br> Mangala natchiyar
-</div>
+    <h1 class="main-title">We Invite You To Celebrate</h1>
 
-<div class="date">
-04 June 2026 | Thursday
-</div>
+    <div class="couple">
+      Maragathavalli <br>
+      & <br>
+      Subramanian
+    </div>
 
-<p class="text">
-With the divine blessings of Lord Ganesha and our beloved parents,
-we cordially invite you to grace our wedding ceremony and bless us
-as we begin our new journey together.
-</p>
+    <div class="date">
+      29 May 2026 • Friday
+    </div>
+
+    <p class="message">
+      With the divine blessings of Lord Murugan and our beloved parents,
+      we joyfully invite you and your family to grace our wedding ceremony.
+      Your presence and blessings will make our celebration truly memorable.
+    </p>
+
+    <button class="music-btn" id="musicToggle" onclick="toggleMusic()">
+      Play Music
+    </button>
+
+  </div>
 
 </section>
 
@@ -475,52 +483,46 @@ as we begin our new journey together.
 
 <section>
 
-<h2 class="section-title">
-Wedding Details
-</h2>
+  <h2 class="section-title">Wedding Details</h2>
 
-<div class="card">
+  <div class="card details">
 
-<div class="details">
+    <div class="detail-box">
+      <h3>Wedding Date</h3>
+      <p>29 May 2026</p>
+      <p>9:00 AM - 10:30 AM</p>
+    </div>
 
-<div class="box">
-<h3>💍 Muhurtham</h3>
-<p>04 June 2026</p>
-<p>9:15 AM – 10:15 AM</p>
-</div>
+    <div class="detail-box">
+      <h3>Venue</h3>
+      <p>Sri Sivan Temple</p>
+      <p>Nerkuppai, Tamil Nadu</p>
+    </div>
 
-<div class="box">
-<h3>📍 Venue</h3>
-<p>Sri Sivan Temple</p>
-<p>Nerkuppai,Tamil Nadu</p>
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
+<!-- DETAILS -->
+
 <section>
 
-<h2 class="section-title">
-Parents Details
-</h2>
+  <h2 class="section-title">Parents Details</h2>
 
-<div class="card">
+  <div class="card details">
 
-<div class="details">
 
-<div class="box">
-<h3> Bride</h3>
-<p>S.Palaniyappan & maragathakala</p>
-</div>
+    <div class="detail-box">
+      <h3>Bride(girl)</h3>
+      <p>S.Palaniyappan Maragathakala</p>
+    </div>
 
-<div class="box">
-<h3> groom</h3>
-<p>S.Subramanian & vimal</p>
-</div>
+    <div class="detail-box">
+      <h3>Groom(boy)</h3>
+      <p>S.Sevugan & Nagammai</p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -528,63 +530,60 @@ Parents Details
 
 <section>
 
-<h2 class="section-title">
-Countdown To Wedding
-</h2>
+  <h2 class="section-title">Countdown</h2>
 
-<div class="countdown">
+  <div class="countdown">
 
-<div class="time">
-<h2 id="days">0</h2>
-<p>Days</p>
-</div>
+    <div class="time">
+      <h2 id="days">0</h2>
+      <p>Days</p>
+    </div>
 
-<div class="time">
-<h2 id="hours">0</h2>
-<p>Hours</p>
-</div>
+    <div class="time">
+      <h2 id="hours">0</h2>
+      <p>Hours</p>
+    </div>
 
-<div class="time">
-<h2 id="minutes">0</h2>
-<p>Minutes</p>
-</div>
+    <div class="time">
+      <h2 id="minutes">0</h2>
+      <p>Minutes</p>
+    </div>
 
-<div class="time">
-<h2 id="seconds">0</h2>
-<p>Seconds</p>
-</div>
+    <div class="time">
+      <h2 id="seconds">0</h2>
+      <p>Seconds</p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
-<!-- SCRATCH LOCATION -->
+<!-- SCRATCH -->
 
 <section>
 
-<h2 class="section-title">
-Scratch To Reveal Location
-</h2>
+  <h2 class="section-title">Scratch To Reveal Venue</h2>
 
-<div class="card rsvp">
+  <div class="card scratch-box">
 
-<p style="margin-bottom:20px;">
-Scratch the golden card to reveal the wedding venue ✨
-</p>
+    <p>
+      Scratch the golden card to reveal the venue QR code ✨
+    </p>
 
-<div class="scratch-container">
+    <div class="scratch-container">
 
-<img src="1111.png" class="qr-image">
+      <img src="1111.png" alt="QR Code">
 
-<canvas id="scratchCanvas"></canvas>
+      <canvas id="scratchCanvas"></canvas>
 
-</div>
+    </div>
 
-<a href="https://maps.app.goo.gl/kWXkSzzE1KbHzNyr5?g_st=aw" target="_blank">
-Open Location
-</a>
 
-</div>
+    <a href="https://maps.app.goo.gl/kWXkSzzE1KbHzNyr5?g_st=aw" target="_blank" rel="noopener" class="open-location">
+      Open Location
+    </a>
+
+  </div>
 
 </section>
 
@@ -592,24 +591,20 @@ Open Location
 
 <section>
 
-<h2 class="section-title">
-</h2>
+  <h2 class="section-title"></h2>
 
-<div class="card rsvp">
+  <div class="card rsvp">
 
-<p>
-We request the honor of your presence
-at our wedding celebration.
-</p>
+    <p>
+      We would be delighted to celebrate our special day with you.
+    </p>
 
-</div>
+  </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-Made with ❤️ for Our Wedding Celebration
+  Made with ❤️ for our Wedding Celebration
 </footer>
 
 <!-- SCRIPT -->
@@ -620,51 +615,59 @@ Made with ❤️ for Our Wedding Celebration
 
 function openInvitation(){
 
-document.getElementById("openScreen").style.opacity = "0";
+  document.getElementById("opening").style.display = "none";
 
-setTimeout(()=>{
-document.getElementById("openScreen").style.display = "none";
-},1000);
+  const music = document.getElementById("bgMusic");
 
-document.getElementById("music").play();
+  music.play().catch(() => {});
+  updateMusicButton();
 
 }
 
-/* MUSIC */
-
-const music = document.getElementById("music");
+function updateMusicButton(){
+  const music = document.getElementById("bgMusic");
+  const button = document.getElementById("musicToggle");
+  if(!button) return;
+  button.textContent = music.paused ? "Play Music" : "Pause Music";
+}
 
 function toggleMusic(){
+  const music = document.getElementById("bgMusic");
+  const button = document.getElementById("musicToggle");
 
-if(music.paused){
-music.play();
-}else{
-music.pause();
-}
-
+  if(music.paused){
+    music.play().then(() => {
+      button.textContent = "Pause Music";
+    }).catch(() => {
+      button.textContent = "Play Music";
+    });
+  } else {
+    music.pause();
+    button.textContent = "Play Music";
+  }
 }
 
 /* COUNTDOWN */
 
-const weddingDate = new Date("June 04, 2026 06:00:00").getTime();
+const weddingDate = new Date("May 29, 2026 09:00:00").getTime();
 
 setInterval(()=>{
 
-const now = new Date().getTime();
+  const now = new Date().getTime();
 
-const distance = weddingDate - now;
+  const distance = weddingDate - now;
 
-document.getElementById("days").innerHTML =
-Math.floor(distance / (1000*60*60*24));
+  document.getElementById("days").innerHTML =
+  Math.floor(distance / (1000*60*60*24));
 
-document.getElementById("hours").innerHTML =
-Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  document.getElementById("hours").innerHTML =
+  Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
 
-document.getElementById("minutes").innerHTML =
-Math.floor((distance % (1000*60*60)) / (1000*60));
+  document.getElementById("minutes").innerHTML =
+  Math.floor((distance % (1000*60*60)) / (1000*60));
 
-document.getElementById("seconds").innerHTML =
-Math.floor((distance % (1000*60)) / 1000);
+  document.getElementById("seconds").innerHTML =
+  Math.floor((distance % (1000*60)) / 1000);
 
 },1000);
 
@@ -676,79 +679,84 @@ const ctx = canvas.getContext("2d");
 
 const container = document.querySelector(".scratch-container");
 
-canvas.width = container.offsetWidth;
-canvas.height = container.offsetHeight;
+function resizeScratchCanvas() {
+  canvas.width = container.offsetWidth;
+  canvas.height = container.offsetHeight;
 
-ctx.fillStyle = "#d4a24c";
-ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.fillStyle = "#d4af37";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
 
-ctx.fillStyle = "#ffffff";
-ctx.font = "bold 30px Poppins";
-ctx.textAlign = "center";
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "bold 30px Arial";
+  ctx.textAlign = "center";
+  ctx.fillText(
+    "Scratch Me",
+    canvas.width / 2,
+    canvas.height / 2
+  );
+}
 
-ctx.fillText(
-"Scratch Here ✨",
-canvas.width/2,
-canvas.height/2
-);
+resizeScratchCanvas();
+window.addEventListener("resize", resizeScratchCanvas);
 
 let isDrawing = false;
 
 function scratch(x,y){
 
-ctx.globalCompositeOperation = "destination-out";
+  ctx.globalCompositeOperation = "destination-out";
 
-ctx.beginPath();
+  ctx.beginPath();
 
-ctx.arc(x,y,25,0,Math.PI*2);
+  ctx.arc(x,y,25,0,Math.PI*2);
 
-ctx.fill();
+  ctx.fill();
 
 }
 
 canvas.addEventListener("mousedown",()=>{
-isDrawing = true;
+  isDrawing = true;
 });
 
 canvas.addEventListener("mouseup",()=>{
-isDrawing = false;
+  isDrawing = false;
 });
 
 canvas.addEventListener("mousemove",(e)=>{
 
-if(!isDrawing) return;
+  if(!isDrawing) return;
 
-const rect = canvas.getBoundingClientRect();
+  const rect = canvas.getBoundingClientRect();
 
-scratch(
-e.clientX - rect.left,
-e.clientY - rect.top
-);
+  scratch(
+    e.clientX - rect.left,
+    e.clientY - rect.top
+  );
 
 });
 
 canvas.addEventListener("touchstart",()=>{
-isDrawing = true;
+  isDrawing = true;
 });
 
 canvas.addEventListener("touchend",()=>{
-isDrawing = false;
+  isDrawing = false;
 });
 
 canvas.addEventListener("touchmove",(e)=>{
 
-e.preventDefault();
+  e.preventDefault();
 
-if(!isDrawing) return;
+  if(!isDrawing) return;
 
-const rect = canvas.getBoundingClientRect();
+  const rect = canvas.getBoundingClientRect();
 
-const touch = e.touches[0];
+  const touch = e.touches[0];
 
-scratch(
-touch.clientX - rect.left,
-touch.clientY - rect.top
-);
+  scratch(
+    touch.clientX - rect.left,
+    touch.clientY - rect.top
+  );
 
 },{passive:false});
 
